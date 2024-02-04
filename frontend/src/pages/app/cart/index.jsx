@@ -58,7 +58,7 @@ function Cart() {
                                 "No products in cart"
                                 :
                                 products.map(({ id, name, image, description, price, size, quantity }, index) => (
-                                    <Card key={index} id={id} name={name} price={price} image={"/images/polo-ralph-lauren-longsleeve.jpg"} description={description} size={size} quantity={quantity} />
+                                    <Card key={index} id={id} name={name} price={price} image={image} description={description} size={size} quantity={quantity} />
                                 ))
                         }
                     </CardsContainer>

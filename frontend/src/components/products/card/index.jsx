@@ -10,13 +10,13 @@ import {
 } from "./styles";
 
 function Card(props) {
-    const { id, name, description, price } = props;
+    const { id, image, name, description, price } = props;
 
     return (
         <MainContainer>
             <Link to={`/product/${id}`}>
                 <ImageWrapper>
-                    <Image src={`/images/polo-ralph-lauren-longsleeve.jpg`} alt={`Polo Ralph Lauren Longsleeve`} />
+                    <Image src={image} alt={name} />
                 </ImageWrapper>
                 <ContentContainer>
                     <Title>{name}</Title>

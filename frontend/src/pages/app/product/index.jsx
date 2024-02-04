@@ -36,7 +36,8 @@ function Product() {
 
     if (!product) return null;
 
-    const { name, price, description } = product;
+    const { name, price, description, image } = product;
+
 
     const handleClickAddToCart = () => {
         console.log("Add to cart");
@@ -46,7 +47,8 @@ function Product() {
                 name,
                 price,
                 description,
-                size: selectedSize
+                size: selectedSize,
+                image,
             },
             message: "Product added to cart",
             severity: severity.success
@@ -61,7 +63,7 @@ function Product() {
                     :
                     <MainContainer>
                         <ImageWrapper>
-                            <Image src={`/images/polo-ralph-lauren-longsleeve.jpg`} alt={`Polo Ralph Lauren Longsleeve`} />
+                            <Image src={image} alt={name} />
                         </ImageWrapper>
                         <DetailsContainer>
                             <Title>{name}</Title>
